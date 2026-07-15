@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(curl -sL --max-time 15 -o /tmp/testimg.jpg \"https://picsum.photos/seed/testxyz/300/200\")",
+      "Bash(node scripts/assets-facilities.mjs)",
+      "Bash(cp _cls_201.png lab-classroom.png)",
+      "Bash(rm -f _cls_*.png)",
+      "Bash(rm -f scripts/_regen.mjs scripts/_regen2.mjs scripts/_regen3.mjs)",
+      "Bash(awk '{print $NF, $5}')",
+      "Bash(cp _w1_c.png why1.png)",
+      "Bash(cp _w3_f.png why3.png)",
+      "Bash(cp _f5_b.png flavour-garden5.png)",
+      "Bash(rm -f _w1_*.png _w3_*.png _f5_*.png)",
+      "Bash(rm -f scripts/_gen.mjs scripts/_gen2.mjs scripts/_gen3.mjs)"
+    ]
+  }
+}
