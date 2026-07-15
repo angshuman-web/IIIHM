@@ -71,7 +71,7 @@ export default function Footer() {
               <Img name="iem_logo" fallback={null} alt="IIIHM" className="h-[42px] w-auto brightness-0 invert" />
               <span className="flex flex-col leading-none">
                 <b className="font-heading text-[1.06rem] text-white">IIIHM</b>
-                <span className="text-[.68rem] font-bold uppercase tracking-[.14em] text-blue-300">Hospitality · IEM</span>
+                <span className="text-[.68rem] font-bold uppercase tracking-[.14em] text-blue-300">IEM Kolkata</span>
               </span>
             </Link>
             <p className="mt-5 max-w-xs text-[13px] leading-relaxed">
