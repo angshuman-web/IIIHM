@@ -9,12 +9,9 @@ import { NAV, ADMISSIONS_URL } from '../data/content';
 
 function Brand({ onClick }) {
   return (
-    <Link to="/" onClick={onClick} className="flex shrink-0 items-center gap-3 font-heading font-bold tracking-tight">
-      <Img name="iem_logo" fallback={null} alt="IIIHM" className="h-[42px] w-auto" />
-      <span className="flex flex-col leading-none">
-        <b className="font-heading text-[1.2rem] text-ink">IIIHM</b>
-        <span className="text-[.80rem] font-bold uppercase tracking-[.14em] text-royal">IEM Kolkata</span>
-      </span>
+    <Link to="/" onClick={onClick} className="flex shrink-0 items-center gap-3">
+      <Img name="iem_logo" fallback={null} alt="IEM" className="h-[42px] w-auto" />
+      <Img name="iiihm-logo" fallback={null} alt="IIIHM" className="h-[42px] w-auto" />
     </Link>
   );
 }

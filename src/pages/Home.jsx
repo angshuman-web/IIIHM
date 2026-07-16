@@ -6,7 +6,6 @@ import Button from '../components/ui/Button';
 import SectionHead from '../components/ui/SectionHead';
 import Counter from '../components/ui/Counter';
 import { Reveal, Stagger } from '../components/ui/Reveal';
-import Tabs from '../components/ui/Tabs';
 import Carousel from '../components/ui/Carousel';
 import ImageRotator from '../components/ui/ImageRotator';
 import { Timeline, Checklist, CTABand } from '../components/ui/Blocks';
@@ -123,40 +122,17 @@ export default function Home() {
         <div className="container-x">
           <SectionHead eyebrow="Programme" title="Bachelor of Hotel Management (BHM)" text="A comprehensive 4-year (8-semester) degree that turns passion for hospitality into a global profession." />
           <Reveal>
-            <Tabs
-              tabs={[
-                { id: 'c', label: 'Curriculum Highlights', content: (
-                  <div className="grid items-center gap-14 lg:grid-cols-2">
-                    <div>
-                      <h3 className="text-[clamp(1.25rem,2vw,1.6rem)]">A curriculum built around craft</h3>
-                      <p className="mt-4 text-muted">Every module pairs theory with the kitchen, the lab and the guest. Core areas span food production, F&amp;B service, front office, housekeeping, hospitality accounting, HR and strategic management.</p>
-                      <div className="mt-6"><Checklist items={['Professional culinary & bakery training', 'Front office & accommodation operations', 'Food & beverage service and management', 'Hospitality marketing, finance & HR', 'Communication, French & soft skills', 'Entrepreneurship & hospitality law']} /></div>
-                    </div>
-                    <div className="group relative overflow-hidden rounded-xl3 shadow-lg2">
-                      <Img name="programme-bhm" alt="BHM programme" className="w-full transition-transform duration-700 ease-premium group-hover:scale-105" />
-                      <div className="absolute bottom-5 left-5 flex items-center gap-3 rounded-2xl bg-white/95 px-4 py-3.5 shadow-card"><b className="text-[1.4rem] text-royal">4 Yrs</b><span className="text-[.78rem] text-muted">8 Semesters<br />UGC-aligned degree</span></div>
-                    </div>
-                  </div>
-                )},
-                { id: 's', label: 'Semester Structure', content: (
-                  <div className="grid gap-[26px] sm:grid-cols-2 lg:grid-cols-4">
-                    {[['Year 1', 'Foundations', 'Culinary basics, service fundamentals, front office & housekeeping foundations.'], ['Year 2', 'Core Operations', 'Advanced kitchen, F&B management, accommodation & hospitality accounting.'], ['Year 3', 'Specialization + Internship', 'Elective specialization and a full industrial training semester.'], ['Year 4', 'Management & Capstone', 'Strategic management, entrepreneurship and an industry capstone project.']].map(([y, t, d]) => (
-                      <article key={y} className="card"><span className="pill">{y}</span><h3 className="mt-3 text-[1.1rem]">{t}</h3><p className="mt-1.5 text-[.92rem] text-muted">{d}</p></article>
-                    ))}
-                  </div>
-                )},
-                { id: 'o', label: 'Career Outcomes', content: (
-                  <div className="grid gap-[26px] sm:grid-cols-2 lg:grid-cols-3">
-                    {[['trophy', 'Global Careers', 'Roles across luxury hotels, cruise lines, airlines and QSR brands worldwide.'], ['trending-up', 'Fast Growth', 'Structured management-trainee tracks with accelerated career progression.'], ['lightbulb', 'Own Ventures', 'Launch cafés, cloud kitchens and boutique hospitality brands with incubation support.']].map(([i, t, d]) => <FeatureCard key={t} icon={i} title={t} text={d} />)}
-                  </div>
-                )},
-                { id: 'r', label: 'Industry Relevance', content: (
-                  <div className="grid gap-[26px] sm:grid-cols-2 lg:grid-cols-3">
-                    {[['handshake', 'Live Industry Projects', 'Curriculum co-designed with hotel partners and refreshed every year.'], ['users', 'Guest Faculty', 'Executive chefs and GMs mentor students through masterclasses.'], ['globe', 'International Exposure', 'Global service standards, exchange pathways and overseas placements.']].map(([i, t, d]) => <FeatureCard key={t} icon={i} title={t} text={d} />)}
-                  </div>
-                )},
-              ]}
-            />
+            <div className="grid items-center gap-14 lg:grid-cols-2">
+              <div>
+                <h3 className="text-[clamp(1.25rem,2vw,1.6rem)]">A curriculum built around craft</h3>
+                <p className="mt-4 text-muted">Every module pairs theory with the kitchen, the lab and the guest. Core areas span food production, F&amp;B service, front office, housekeeping, hospitality accounting, HR and strategic management.</p>
+                <div className="mt-6"><Checklist items={['Professional culinary & bakery training', 'Front office & accommodation operations', 'Food & beverage service and management', 'Hospitality marketing, finance & HR', 'Communication, French & soft skills', 'Entrepreneurship & hospitality law']} /></div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl3 shadow-lg2">
+                <Img name="programme-bhm" alt="BHM programme" className="w-full transition-transform duration-700 ease-premium group-hover:scale-105" />
+                <div className="absolute bottom-5 left-5 flex items-center gap-3 rounded-2xl bg-white/95 px-4 py-3.5 shadow-card"><b className="text-[1.4rem] text-royal">4 Yrs</b><span className="text-[.78rem] text-muted">8 Semesters<br />UGC-aligned degree</span></div>
+              </div>
+            </div>
           </Reveal>
           <div className="mt-10 text-center"><Button to="/programme">View Full Programme</Button></div>
         </div>
@@ -302,7 +278,7 @@ export default function Home() {
             {FLAVOUR_GARDEN_IMAGES.map((img, idx) => (
               <div
                 key={img}
-                className={`group relative overflow-hidden rounded-2xl shadow-sm2 ${idx === 0 ? 'col-span-2 aspect-[16/10] lg:row-span-2 lg:aspect-auto' : 'aspect-[4/3]'}`}
+                className={`group relative overflow-hidden rounded-2xl shadow-sm2 ${idx === 0 ? 'col-span-2 aspect-[16/10] lg:row-span-2 lg:aspect-[4/3]' : 'aspect-[4/3]'}`}
               >
                 <Img name={img} alt="Flavour Garden café" className="h-full w-full object-cover transition-transform duration-700 ease-premium group-hover:scale-110" />
                 <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

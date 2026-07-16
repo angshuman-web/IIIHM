@@ -115,7 +115,7 @@ export function FacultyCard({ img, name, role, qual, expertise, fixed = false })
   );
 }
 
-export function NewsCard({ img, tag, date, title, text, to = '/news-events' }) {
+export function NewsCard({ img, tag, date, title, text, to = '/news-events', more = true }) {
   return (
     <motion.article {...hoverLift} className="group bg-white border border-line rounded-xl2 overflow-hidden shadow-xs hover:shadow-lg2 flex flex-col h-full">
       <div className="aspect-[16/10] overflow-hidden relative">
@@ -126,7 +126,7 @@ export function NewsCard({ img, tag, date, title, text, to = '/news-events' }) {
         <span className="text-[.8rem] text-muted font-semibold inline-flex items-center gap-1.5"><Icon name="calendar" className="ico w-4 h-4" /> {date}</span>
         <h3 className="text-[1.14rem] my-2">{title}</h3>
         <p className="text-[.92rem] text-muted flex-1">{text}</p>
-        <Link to={to} className="btn-line mt-3 inline-flex items-center gap-1.5 group/l">Read more <Icon name="arrow-right" className="ico group-hover/l:translate-x-1 transition-transform" /></Link>
+        {more && <Link to={to} className="btn-line mt-3 inline-flex items-center gap-1.5 group/l">Read more <Icon name="arrow-right" className="ico group-hover/l:translate-x-1 transition-transform" /></Link>}
       </div>
     </motion.article>
   );

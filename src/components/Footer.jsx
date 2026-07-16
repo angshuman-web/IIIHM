@@ -67,12 +67,9 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           {/* Brand + contact */}
           <div>
-            <Link to="/" className="flex items-center gap-3 font-heading font-bold">
-              <Img name="iem_logo" fallback={null} alt="IIIHM" className="h-[42px] w-auto brightness-0 invert" />
-              <span className="flex flex-col leading-none">
-                <b className="font-heading text-[1.06rem] text-white">IIIHM</b>
-                <span className="text-[.68rem] font-bold uppercase tracking-[.14em] text-blue-300">IEM Kolkata</span>
-              </span>
+            <Link to="/" className="flex items-center gap-3">
+              <Img name="iem_logo" fallback={null} alt="IEM" className="h-[42px] w-auto brightness-0 invert" />
+              <Img name="iiihm-logo" fallback={null} alt="IIIHM" className="h-[42px] w-auto brightness-0 invert" />
             </Link>
             <p className="mt-5 max-w-xs text-[13px] leading-relaxed">
               IEM&apos;s International Institute of Hotel &amp; Hospitality Management — shaping world-class hospitality professionals through practical excellence and industry immersion.

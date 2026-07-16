@@ -1,4 +1,3 @@
-import Icon from '../lib/icons';
 import Img from '../lib/Img';
 import { Reveal } from '../components/ui/Reveal';
 import { PageHeader } from '../components/ui/Blocks';
@@ -20,10 +19,6 @@ export default function VisionMission() {
           <Reveal dir="left">
             <div className="group relative overflow-hidden rounded-xl3 shadow-lg2">
               <Img name="vision" alt="Our vision" className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-premium group-hover:scale-105" />
-              <div className="absolute bottom-5 left-5 flex items-center gap-3 rounded-2xl bg-white/95 px-4 py-3.5 shadow-card">
-                <Icon name="compass" className="ico ico-lg text-royal" />
-                <span className="text-[.82rem] font-bold text-ink">Centre of Excellence</span>
-              </div>
             </div>
           </Reveal>
           <Reveal dir="right">

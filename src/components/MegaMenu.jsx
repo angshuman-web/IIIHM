@@ -33,15 +33,13 @@ export default function MegaMenu({ mega, label, open, onNavigate }) {
                   to={mega.feature.to}
                   external={mega.feature.external}
                   onClick={onNavigate}
-                  className="group/feat flex w-[190px] shrink-0 flex-col justify-between rounded-xl p-5 text-white shadow-blue"
-                  style={{ background: 'linear-gradient(135deg,#0b2e6b,#1656C4)' }}
+                  className="group/feat flex w-[190px] shrink-0 flex-col justify-center gap-2 rounded-xl border border-line bg-blue-50/60 p-5 transition-colors hover:bg-blue-50"
                 >
-                  <span className="grid h-10 w-10 place-items-center rounded-lg bg-white/15">
-                    <Icon name="arrow-right" className="ico h-5 w-5 transition-transform group-hover/feat:translate-x-0.5" />
-                  </span>
-                  <span>
-                    <span className="block text-[1.05rem] font-heading font-bold leading-tight">{mega.feature.label}</span>
-                    {mega.feature.desc && <span className="mt-1.5 block text-[12px] leading-snug text-blue-100">{mega.feature.desc}</span>}
+                  <span className="block text-[1.05rem] font-heading font-bold leading-tight text-royal">{mega.feature.label}</span>
+                  {mega.feature.desc && <span className="block text-[12px] leading-snug text-muted">{mega.feature.desc}</span>}
+                  <span className="mt-1 inline-flex items-center gap-1.5 text-[12.5px] font-bold text-royal">
+                    Get started
+                    <Icon name="arrow-right" className="ico h-3.5 w-3.5 transition-transform group-hover/feat:translate-x-0.5" />
                   </span>
                 </SmartLink>
               )}
@@ -61,12 +59,12 @@ export default function MegaMenu({ mega, label, open, onNavigate }) {
                             to={link.to}
                             external={link.external}
                             onClick={onNavigate}
-                            className="group/link flex items-center justify-between gap-3 whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-semibold text-ink-2 transition-colors hover:bg-blue-50 hover:text-royal"
+                            className="group/link flex items-center justify-between gap-3 whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-semibold text-ink-2 transition-colors duration-200 hover:bg-blue-50 hover:text-royal"
                           >
-                            <span>{link.label}</span>
+                            <span className="transition-transform duration-200 group-hover/link:translate-x-0.5">{link.label}</span>
                             <Icon
                               name="arrow-right"
-                              className="ico h-3.5 w-3.5 shrink-0 -translate-x-1 text-royal opacity-0 transition-all group-hover/link:translate-x-0 group-hover/link:opacity-100"
+                              className="ico h-3.5 w-3.5 shrink-0 text-royal opacity-0 transition-opacity duration-200 group-hover/link:opacity-100"
                             />
                           </SmartLink>
                         </li>

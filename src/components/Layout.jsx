@@ -18,14 +18,13 @@ function Preloader() {
       {!done && (
         <motion.div
           initial={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-[2000] grid place-items-center"
-          style={{ background: 'linear-gradient(135deg,#0b2e6b,#1656C4)' }}
+          className="fixed inset-0 z-[2000] grid place-items-center bg-white"
         >
-          <div className="w-[86px] h-[86px] rounded-[20px] bg-white/[.12] grid place-items-center animate-plpulse">
-            <Img name="iem_logo" fallback={null} alt="IIIHM" className="w-14 h-14 object-contain brightness-0 invert" />
+          <div className="w-[110px] h-[110px] grid place-items-center animate-plpulse">
+            <Img name="iiihm-logo" fallback={null} alt="IIIHM" className="w-full h-full object-contain" />
           </div>
           <motion.div initial={{ width: 0 }} animate={{ width: '100%' }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute bottom-0 left-0 h-[3px]" style={{ background: 'linear-gradient(90deg,#3b82f6,#fff)' }} />
+            className="absolute bottom-0 left-0 h-[3px]" style={{ background: 'linear-gradient(90deg,#1656C4,#3b82f6)' }} />
         </motion.div>
       )}
     </AnimatePresence>

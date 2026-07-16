@@ -13,7 +13,7 @@ export default function NewsEvents() {
         <div className="container-x">
           <SectionHead eyebrow="Latest" title="Department News" />
           <Stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-[26px]">
-            {NEWS.map(([img, tag, date, t, d]) => <NewsCard key={t} img={img} tag={tag} date={date} title={t} text={d} />)}
+            {NEWS.map(([img, tag, date, t, d]) => <NewsCard key={t} img={img} tag={tag} date={date} title={t} text={d} more={false} />)}
           </Stagger>
         </div>
       </section>
